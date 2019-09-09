@@ -1,0 +1,8 @@
+function [ans] = ex_normal_skewness(n)
+    m = 10000;
+    n = [10 20 30 50 100 500];
+    for i = 1:length(n)
+        sktests = zeros(m,1);
+        for j =1:m
+           x = normrnd(0,1,[n(i) 1]);
+           m3 = mean((x - xbar)^3)
